@@ -4,11 +4,11 @@
 #                                                                     #
 #######################################################################
 library(readxl)
-hist <- read_excel("C:/Users/bibbs/Downloads/KyotoFullFlower7.xls",
+hist <- read_excel("C:/Users/alian/Downloads/KyotoFullFlower7.xls",
                    sheet = 1, range = "A2:F1222",
                    col_names = c("hyear", "hdoy", "hdate",
                                  "hsource", "htype", "hrefname"))
-mod <- read_excel("C:/Users/bibbs/Downloads/KyotoFullFlower7.xls",
+mod <- read_excel("C:/Users/alian/Downloads/KyotoFullFlower7.xls",
                   sheet = 2, range = "A1:G6574", 
                   col_names = TRUE)
 
@@ -323,4 +323,5 @@ plot6 <- plot(ts_kyoto, main =
 points(x = 2022, y = 96.13347, col = "red", pch = 16)
 segments(x0 = 2022, y0 = 96.13347, x1 = 2021, 
          y1 = ts_kyoto[length(ts_kyoto)], col = "green", lty = "dashed")
+
 print(plot6)
